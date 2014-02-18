@@ -12,14 +12,14 @@
 ## Install the necessary packages: googleCite, tm, wordcloud, RColorBrewer, MiscPsycho, devtools
 ###############################################################################################################
 
-library(devtools)
+require(devtools)
 install_github("muschellij2/googleCite")
 
-library(googleCite)
-library(tm)
-library(wordcloud)
-library(RColorBrewer)
-library(MiscPsycho)
+require(googleCite)
+require(tm)
+require(wordcloud)
+require(RColorBrewer)
+require(MiscPsycho)
 
 ###############################################################################################################
 ## Get some citations to start playing with using googlCite package

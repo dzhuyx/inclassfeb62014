@@ -37,7 +37,7 @@ url.chicago= 'http://galton.uchicago.edu/people/faculty.shtml'
 get.profs.info = function(url,format='table', table.cols=4, title.col=-1, 
                           names.col=1, name.divide=', ', parse.names=FALSE, first.last=TRUE, 
                           name.other.sep='\n', begin.name, end.name) {
-     tree = htmlTreeParse(url,useInternal=TRUE)
+     tree = htmlTreeParse(url, useInternal=TRUE)
      if (format=='table') {
           content = xpathSApply(tree,"//td",xmlValue)
      }
@@ -116,7 +116,7 @@ pubmed.name.minn = paste(last.name.minn,first.initial.minn)
 df.minn = data.frame(last=last.name.minn,first=first.name.minn,pubmed.name=pubmed.name.minn)
 
 # Stanford University
-names.stan = c('Emmanuel J. Candès','Sourav Chatterjee','Amir Dembo','Persi Diaconis','David Donoho','Bradley Efron','Trevor J. Hastie','Susan Holmes','Iain Johnstone','Tze Leung Lai','Art B. Owen','Joseph P. Romano','David O. Siegmund','Robert Tibshirani','Guenther Walther','Wing Hung Wong','Andrea Montanari','Jonathan Taylor','Lester Mackey','Bala Rajaratnam','John Chambers','Balasubramanian Narasimhan','Theodore W. Anderson','Jerome H. Friedman','Ingram Olkin','Charles Stein','Paul Switzer')
+names.stan = c('Emmanuel J. Cand?s','Sourav Chatterjee','Amir Dembo','Persi Diaconis','David Donoho','Bradley Efron','Trevor J. Hastie','Susan Holmes','Iain Johnstone','Tze Leung Lai','Art B. Owen','Joseph P. Romano','David O. Siegmund','Robert Tibshirani','Guenther Walther','Wing Hung Wong','Andrea Montanari','Jonathan Taylor','Lester Mackey','Bala Rajaratnam','John Chambers','Balasubramanian Narasimhan','Theodore W. Anderson','Jerome H. Friedman','Ingram Olkin','Charles Stein','Paul Switzer')
 split.names.stan = strsplit(names.stan,' ')
 first.names.stan = unlist(lapply(split.names.stan,'[',1))
 last.names.stan = lapply(split.names.stan,'tail',-1)
